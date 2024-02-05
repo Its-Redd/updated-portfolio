@@ -74,8 +74,6 @@ let type2 = '2';
 let type3 = 20;
 let type4 = 10;
 
-// Brand varmt kode. Lige til historiebøgerne.
-// Jeg har lavet en masse variabler, som jeg har sat sammen på forskellige måder.
 let res1 = type1 + type2;
 let res2 = type1 + type3;
 let res3 = type4 + type2;
