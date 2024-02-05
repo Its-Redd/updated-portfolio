@@ -25,11 +25,72 @@ header a {
 
 header h1 {
   color: rgb(255, 255, 255);
+  margin-left: 1%;
 }
 
 header h6 {
   color: rgb(255, 255, 255);
   font-weight: 400;
+}
+
+/* Nav */
+
+.mobile {
+  margin-left: 67%;
+  z-index: 99;
+  display: flex;
+}
+
+.mobile label {
+  z-index: 99;
+  width: 40px;
+}
+
+.mobile ul {
+  list-style-type: none;
+}
+
+.close {
+  display: none;
+  z-index: 98;
+}
+
+.checkbox {
+  display: none;
+}
+
+.mobile ul {
+  display: none;
+}
+
+.checkbox:checked ~ ul {
+  padding-top: 5%;
+  display: block;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+  top: 6%;
+  background-color: var(--red);
+  width: 100%;
+  text-align: center;
+}
+
+.checkbox:checked ~ ul li {
+  padding: 10%;
+}
+
+.checkbox:checked ~ ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+}
+
+.checkbox:checked ~ label .open {
+  display: none;
+}
+
+.checkbox:checked ~ label .close {
+  display: block;
 }
 
 nav {
@@ -44,6 +105,10 @@ nav a {
   color: white;
   text-decoration: none;
   margin-right: 3%;
+}
+
+nav a:hover {
+  color: crimson;
 }
 /* MAIN */
 
@@ -135,6 +200,10 @@ html {
 
 .classbox a {
   color: rgb(82, 82, 82);
+}
+
+.classbox a:hover {
+  color: crimson;
 }
 
 .classbox i {
