@@ -83,7 +83,7 @@ let res6 = type3 + type4 + type2;
 let res7 = type4 / type2;
 let res8 = type2 * type3 + type1;
 let res9 = parseInt(type1) + parseInt(type2);
-let res10 = toString(type3) + toString(type4);
+let res10 = type3.toString() + type4.toString();
 
 let finalResult = `res1 = ${res1}, res2 = ${res2}, res3 = ${res3}, res4 = ${res4}, res5 = ${res5}, res6 = ${res6}, res7 = ${res7}, res8 = ${res8}, res9 = ${res9}, res10 = ${res10}`;
 console.log('Opgave 11: ' + finalResult);
