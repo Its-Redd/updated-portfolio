@@ -67,3 +67,23 @@ console.log('Opgave 10: ' + result);
 //  salary = number,
 //  deci3 = number,
 //  compare = boolean
+
+// Opgave 11
+let type1 = '10';
+let type2 = '2';
+let type3 = 20;
+let type4 = 10;
+
+let res1 = type1 + type2;
+let res2 = type1 + type3;
+let res3 = type4 + type2;
+let res4 = type3 + type4;
+let res5 = 'Resultatet af type3 + type4 er ' + (type3 + type4);
+let res6 = type3 + type4 + type2;
+let res7 = type4 / type2;
+let res8 = type2 * type3 + type1;
+let res9 = parseInt(type1) + parseInt(type2);
+let res10 = toString(type3) + toString(type4);
+
+let finalResult = `res1 = ${res1}, res2 = ${res2}, res3 = ${res3}, res4 = ${res4}, res5 = ${res5}, res6 = ${res6}, res7 = ${res7}, res8 = ${res8}, res9 = ${res9}, res10 = ${res10}`;
+console.log('Opgave 11: ' + finalResult);
