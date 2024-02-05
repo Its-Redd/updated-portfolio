@@ -34,3 +34,36 @@ console.log('Opgave 6: ' + roundDown); // 3
 // Opgave 7
 let squareRoot = Math.sqrt(65);
 console.log('Opgave 7: ' + squareRoot); // 8.06225774829855
+
+// Opgave 8
+let toPull = 'John Doe is 25 years old';
+let pulled = toPull.match('Doe');
+console.log('Opgave 8: ' + pulled); // Doe
+
+// Opgave 9
+let compare = false;
+console.log('Opgave 9: ' + compare); // false
+
+// Opgave 10
+let fullNameType = typeof fullName;
+let salaryType = typeof salary;
+let deci3Type = typeof deci3;
+let compareType = typeof compare;
+
+let result =
+  'fullName = ' +
+  fullNameType +
+  ', ' +
+  'salary = ' +
+  salaryType +
+  ', ' +
+  'deci3 = ' +
+  deci3Type +
+  ', ' +
+  'compare = ' +
+  compareType;
+console.log('Opgave 10: ' + result);
+// fullName = string,
+//  salary = number,
+//  deci3 = number,
+//  compare = boolean
