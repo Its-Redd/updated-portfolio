@@ -1,4 +1,4 @@
-use strict;
+'use strict';
 
 let greeting = 'Hej verden';
 console.log('Opgave 1: ' + greeting);
