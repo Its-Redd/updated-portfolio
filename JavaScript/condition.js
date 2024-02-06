@@ -4,7 +4,7 @@ console.log('Assignment 1...');
 
 // Declare variables
 let a1Number1;
-let a1Number2; 
+let a1Number2;
 
 // ? I am sure there is a better way to do this, but I am not sure how to do it. So I will do it the way I know how to do it.
 
@@ -17,7 +17,7 @@ while (!doneFirst) {
   if (Number(firstNumber) === NaN) {
     alert('Du skal indtaste et tal');
   } else {
-    a1Number1umber1 = Number(firstNumber);  // This is the line that was missing
+    a1Number1 = Number(firstNumber); // This is the line that was missing
     doneFirst = true;
   }
 }
@@ -29,17 +29,17 @@ while (!doneSecond) {
   if (Number(secondNumber) === NaN) {
     alert('Du skal indtaste et tal');
   } else {
-    a1Number2 = Number(secondNumber);  // This is the line that was missing
+    a1Number2 = Number(secondNumber); // This is the line that was missing
     doneSecond = true;
   }
 }
 
 // Compare the two numbers and alert the result to the user
-if (Number(firstNumber) > Number(secondNumber)) {
+if (a1Number1 > a1Number2) {
   alert('Det første tal er størst');
-} else if (number(firstNumber) < Number(secondNumber)) {
+} else if (a1Number1 < a1Number2) {
   alert('Det andet tal er størst');
-} else if (number(firstNumber) === Number(secondNumber)) {
+} else if (a1Number1 === a1Number2) {
   alert('Tallene er ens');
 } else {
   alert('Noget gik galt'); // Just in case 😉
@@ -111,12 +111,10 @@ if (a2Number1 < a2Number2 && a2Number1 < a2Number3) {
   console.error('Something went wrong...');
   alert('Noget gik galt'); // Just in case 😉
 }
-*/
 
 // ! Assignment 3
 // Description: takes a number from the user and alerts the user if the number is even or odd.
 console.log('Assignment 3...');
-
 
 // Declare variables
 let a3Number1;
@@ -149,7 +147,6 @@ if (a3Number1 % 2 != 0) {
 // ! Assignment 4
 // Description: the user is asked how many correct answers they had, and the user is then given a grade based on the number of correct answers. With the max correct answers being 80. if the user enters a number higher than 80, the user is alerted that they are a cheater.
 console.log('Assignment 4...');
-
 
 let a4CorrectAnswers;
 let a4Grade;
@@ -191,11 +188,9 @@ if (a4CorrectAnswers <= 80) {
   alert('Du snyder, vi har meldt din IP til skoleinspektøren!');
 }
 
-
 // ! Assignment 5
 // Description: takes a number from the user, henceforth referred to as x, x is multiplied by itself. We then find the square root of x and finally we find x to the power of x. The results are then alerted to the user.
 console.log('Assignment 5...');
-
 
 // Declare variables
 let a5Number1;
@@ -234,7 +229,6 @@ console.log('Number to the power of...');
 alert(
   `${a5Number1} ganget med sig selv er: ${a5number1multiplied} \nKvadratroden af ${a5Number1} er: ${a5Number1Squared} \n${a5Number1} opløftet i sig selv. potens er: ${a5Number1powerOf}`
 );
-
 
 // ! Assignment 6
 // Description: gets the current month number and alerts the user of the name of the month and the season that the month is in.
