@@ -173,3 +173,25 @@ while (!doneFirst) {
     doneFirst = true;
   }
 }
+
+// Compare the number of correct answers and alert the result to the user
+if (a4CorrectAnswers <= 80) {
+  if (a4CorrectAnswers >= 71 && a4CorrectAnswers <= 80) {
+    a4Grade = '12';
+  } else if (a4CorrectAnswers >= 56 && a4CorrectAnswers < 70) {
+    a4Grade = '10';
+  } else if (a4CorrectAnswers >= 41 && a4CorrectAnswers < 55) {
+    a4Grade = '7';
+  } else if (a4CorrectAnswers >= 21 && a4CorrectAnswers < 40) {
+    a4Grade = '4';
+  } else if (a4CorrectAnswers >= 11 && a4CorrectAnswers < 20) {
+    a4Grade = '02';
+  } else if (a4CorrectAnswers >= 1 && a4CorrectAnswers < 10) {
+    a4Grade = '00';
+  } else if (a4CorrectAnswers == 0) {
+    a4Grade = '-3';
+  }
+  alert(`Du fik karakteren ${a4Grade}`);
+} else {
+  alert('Du snyder, vi har meldt din IP til skoleinspektøren!');
+}
