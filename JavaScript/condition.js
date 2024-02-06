@@ -1,7 +1,6 @@
 // ! Assignment 1
 // Description: takes two numbers from the user and alerts the user of which number is the largest.
 console.log('Assignment 1...');
-/*
 
 // Declare variables
 let a1Number1;
@@ -45,11 +44,9 @@ if (Number(firstNumber) > Number(secondNumber)) {
 } else {
   alert('Noget gik galt'); // Just in case 😉
 }
-*/
 // ! Assignment 2
 // Description: takes three numbers from the user and alerts the user of which number is the lowest.
 console.log('Assignment 2...');
-/*
 
 // Declare variables
 let a2Number1;
@@ -120,7 +117,6 @@ if (a2Number1 < a2Number2 && a2Number1 < a2Number3) {
 // Description: takes a number from the user and alerts the user if the number is even or odd.
 console.log('Assignment 3...');
 
-/*
 
 // Declare variables
 let a3Number1;
@@ -150,13 +146,10 @@ if (a3Number1 % 2 != 0) {
   alert('Tallet er ulige');
 }
 
-*/
-
 // ! Assignment 4
 // Description: the user is asked how many correct answers they had, and the user is then given a grade based on the number of correct answers. With the max correct answers being 80. if the user enters a number higher than 80, the user is alerted that they are a cheater.
 console.log('Assignment 4...');
 
-/*
 
 let a4CorrectAnswers;
 let a4Grade;
@@ -198,11 +191,11 @@ if (a4CorrectAnswers <= 80) {
   alert('Du snyder, vi har meldt din IP til skoleinspektøren!');
 }
 
-*/
 
 // ! Assignment 5
 // Description: takes a number from the user, henceforth referred to as x, x is multiplied by itself. We then find the square root of x and finally we find x to the power of x. The results are then alerted to the user.
 console.log('Assignment 5...');
+
 
 // Declare variables
 let a5Number1;
@@ -241,3 +234,80 @@ console.log('Number to the power of...');
 alert(
   `${a5Number1} ganget med sig selv er: ${a5number1multiplied} \nKvadratroden af ${a5Number1} er: ${a5Number1Squared} \n${a5Number1} opløftet i sig selv. potens er: ${a5Number1powerOf}`
 );
+
+
+// ! Assignment 6
+// Description: gets the current month number and alerts the user of the name of the month and the season that the month is in.
+console.log('Assignment 6...');
+
+// Declare variables
+let a6MonthNumber;
+let a6MonthName;
+let a6Season;
+
+// Get the current month number
+a6MonthNumber = new Date().getMonth();
+console.log('Month number found...');
+
+// Find the name of the month
+switch (a6MonthNumber) {
+  case 0:
+    a6MonthName = 'Januar';
+    break;
+  case 1:
+    a6MonthName = 'Februar';
+    break;
+  case 2:
+    a6MonthName = 'Marts';
+    break;
+  case 3:
+    a6MonthName = 'April';
+    break;
+  case 4:
+    a6MonthName = 'Maj';
+    break;
+  case 5:
+    a6MonthName = 'Juni';
+    break;
+  case 6:
+    a6MonthName = 'Juli';
+    break;
+  case 7:
+    a6MonthName = 'August';
+    break;
+  case 8:
+    a6MonthName = 'September';
+    break;
+  case 9:
+    a6MonthName = 'Oktober';
+    break;
+  case 10:
+    a6MonthName = 'November';
+    break;
+  case 11:
+    a6MonthName = 'December';
+    break;
+  default:
+    a6MonthName = 'Fejl';
+    console.error('Something went wrong...');
+    break;
+}
+console.log('Month name found...');
+
+// Find the season of the month
+if (a6MonthNumber >= 2 && a6MonthNumber <= 4) {
+  a6Season = 'Forår';
+}
+if (a6MonthNumber >= 5 && a6MonthNumber <= 7) {
+  a6Season = 'Sommer';
+}
+if (a6MonthNumber >= 8 && a6MonthNumber <= 10) {
+  a6Season = 'Efterår';
+}
+if (a6MonthNumber == 11 || a6MonthNumber <= 1) {
+  a6Season = 'Vinter';
+}
+console.log('Season found...');
+
+// Alert the results to the user
+alert(`Vi er i måneden ${a6MonthName}, og det er ${a6Season}`);
