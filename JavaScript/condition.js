@@ -63,7 +63,7 @@ while (!doneFirst) {
   if (Number(firstNumber) === NaN) {
     alert('Du skal indtaste et tal');
   } else {
-    a1Number1umber1 = Number(firstNumber); // This is the line that was missing
+    a2Number1 = Number(firstNumber); // This is the line that was missing
     console.log('First number proccessed...');
     doneFirst = true;
   }
@@ -76,7 +76,7 @@ while (!doneSecond) {
   if (Number(secondNumber) === NaN) {
     alert('Du skal indtaste et tal');
   } else {
-    a1Number2 = Number(secondNumber); // This is the line that was missing
+    a2Number2 = Number(secondNumber); // This is the line that was missing
     console.log('Second number proccessed...');
     doneSecond = true;
   }
@@ -89,7 +89,7 @@ while (!doneThird) {
   if (Number(thirdNumber) === NaN) {
     alert('Du skal indtaste et tal');
   } else {
-    a1Number3 = Number(thirdNumber); // This is the line that was missing
+    a2Number3 = Number(thirdNumber); // This is the line that was missing
     console.log('Third number proccessed...');
     doneThird = true;
   }
@@ -105,7 +105,7 @@ if (a2Number1 < a2Number2 && a2Number1 < a2Number3) {
 } else if (a2Number3 < a2Number1 && a2Number3 < a2Number2) {
   console.log('Third number is the smallest...');
   alert('Det tredje tal er mindst');
-} else if (a2Number1 === a2Number2 && a2Number1 === a2Number3) {
+} else if (a2Number1 == a2Number2 && a2Number1 == a2Number3) {
   console.log('All numbers are the same...');
   alert('Alle tal er ens');
 } else {
