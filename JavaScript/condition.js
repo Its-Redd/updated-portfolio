@@ -156,6 +156,8 @@ if (a3Number1 % 2 != 0) {
 // Description: the user is asked how many correct answers they had, and the user is then given a grade based on the number of correct answers. With the max correct answers being 80. if the user enters a number higher than 80, the user is alerted that they are a cheater.
 console.log('Assignment 4...');
 
+/*
+
 let a4CorrectAnswers;
 let a4Grade;
 
@@ -195,3 +197,47 @@ if (a4CorrectAnswers <= 80) {
 } else {
   alert('Du snyder, vi har meldt din IP til skoleinspektøren!');
 }
+
+*/
+
+// ! Assignment 5
+// Description: takes a number from the user, henceforth referred to as x, x is multiplied by itself. We then find the square root of x and finally we find x to the power of x. The results are then alerted to the user.
+console.log('Assignment 5...');
+
+// Declare variables
+let a5Number1;
+let a5number1multiplied;
+let a5Number1Squared;
+let a5Number1powerOf;
+
+// While loop to get the first number from the user and check if it is a number or not
+doneFirst = false;
+while (!doneFirst) {
+  let firstNumber = prompt(
+    'Indtast et tal, og jeg vil fortælle dig hvad der sker med tallet \n\nIndtast tallet: '
+  );
+  if (Number(firstNumber) === NaN) {
+    alert('Du skal indtaste et tal');
+  } else {
+    a5Number1 = Number(firstNumber);
+    console.log('Number confirmed...');
+    doneFirst = true;
+  }
+}
+
+// Multiply the number by itself
+a5number1multiplied = a5Number1 * a5Number1;
+console.log('Number multiplied...');
+
+// Find the square root of the number
+a5Number1Squared = Math.sqrt(a5Number1);
+console.log('Number squared...');
+
+// Find the number to the power of the number
+a5Number1powerOf = Math.pow(a5Number1, a5Number1);
+console.log('Number to the power of...');
+
+// Alert the results to the user
+alert(
+  `${a5Number1} ganget med sig selv er: ${a5number1multiplied} \nKvadratroden af ${a5Number1} er: ${a5Number1Squared} \n${a5Number1} opløftet i sig selv. potens er: ${a5Number1powerOf}`
+);
