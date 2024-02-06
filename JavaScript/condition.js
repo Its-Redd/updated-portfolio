@@ -1,3 +1,5 @@
+'use strict';
+
 // ! Assignment 1
 // Description: takes two numbers from the user and alerts the user of which number is the largest.
 console.log('Assignment 1...');
