@@ -5,9 +5,7 @@
 function assignment1() {
   console.log('Assignment 1...');
   let countries = ['Denmark', 'Sweden', 'Norway', 'Finland'];
-  for (let i = 0; i < countries.length; i++) {
-    console.log(countries[i]);
-  }
+  console.log(countries);
 }
 
 // ! Assignment 2
