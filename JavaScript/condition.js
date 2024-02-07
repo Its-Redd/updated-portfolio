@@ -16,10 +16,10 @@ while (!doneFirst) {
   let firstNumber = prompt(
     'Indtast to tal, og jeg vil fortælle dig hvilket tal der er størst \n\nIndtast det første tal: '
   );
-  if (Number(firstNumber) === NaN) {
+  if (isNaN(firstNumber)) {
     alert('Du skal indtaste et tal');
   } else {
-    a1Number1 = Number(firstNumber); // This is the line that was missing
+    a1Number1 = Number(firstNumber);
     doneFirst = true;
   }
 }
@@ -28,10 +28,10 @@ while (!doneFirst) {
 doneSecond = false;
 while (!doneSecond) {
   let secondNumber = prompt('Indtast det andet tal: ');
-  if (Number(secondNumber) === NaN) {
+  if (isNaN(secondNumber)) {
     alert('Du skal indtaste et tal');
   } else {
-    a1Number2 = Number(secondNumber); // This is the line that was missing
+    a1Number2 = Number(secondNumber);
     doneSecond = true;
   }
 }
@@ -46,6 +46,7 @@ if (a1Number1 > a1Number2) {
 } else {
   alert('Noget gik galt'); // Just in case 😉
 }
+
 // ! Assignment 2
 // Description: takes three numbers from the user and alerts the user of which number is the lowest.
 console.log('Assignment 2...');
@@ -61,7 +62,7 @@ while (!doneFirst) {
   let firstNumber = prompt(
     'Indtast tre tal, og jeg vil fortælle dig hvilket tal der er mindst \n\nIndtast det første tal: '
   );
-  if (Number(firstNumber) === NaN) {
+  if (isNaN(firstNumber)) {
     alert('Du skal indtaste et tal');
   } else {
     a2Number1 = Number(firstNumber); // This is the line that was missing
@@ -74,7 +75,7 @@ while (!doneFirst) {
 doneSecond = false;
 while (!doneSecond) {
   let secondNumber = prompt('Indtast det andet tal: ');
-  if (Number(secondNumber) === NaN) {
+  if (isNaN(secondNumber)) {
     alert('Du skal indtaste et tal');
   } else {
     a2Number2 = Number(secondNumber); // This is the line that was missing
@@ -87,7 +88,7 @@ while (!doneSecond) {
 doneThird = false;
 while (!doneThird) {
   let thirdNumber = prompt('Indtast det tredje tal: ');
-  if (Number(thirdNumber) === NaN) {
+  if (isNaN(thirdNumber)) {
     alert('Du skal indtaste et tal');
   } else {
     a2Number3 = Number(thirdNumber); // This is the line that was missing
@@ -122,12 +123,12 @@ console.log('Assignment 3...');
 let a3Number1;
 
 // While loop to get the first number from the user and check if it is a number or not
-doneFirst = false;
+doneFirst = false; // TODO: remove let
 while (!doneFirst) {
   let firstNumber = prompt(
     'Indtast et tal, og jeg vil fortælle dig om det er lige eller ulige \n\nIndtast tallet: '
   );
-  if (Number(firstNumber) === NaN) {
+  if (isNaN(firstNumber)) {
     alert('Du skal indtaste et tal');
   } else {
     a3Number1 = Number(firstNumber);
@@ -140,8 +141,7 @@ while (!doneFirst) {
 if (a3Number1 % 2 == 0) {
   console.log('Number is even...');
   alert('Tallet er lige');
-}
-if (a3Number1 % 2 != 0) {
+} else if (a3Number1 % 2 != 0) {
   console.log('Number is odd...');
   alert('Tallet er ulige');
 }
@@ -159,7 +159,7 @@ while (!doneFirst) {
   let correctAnswers = prompt(
     'Hvor mange rigtige svar havde du? \n\nIndtast antal rigtige svar: '
   );
-  if (Number(correctAnswers) === NaN) {
+  if (isNaN(correctAnswers)) {
     alert('Du skal indtaste et tal');
   } else {
     a4CorrectAnswers = Number(correctAnswers);
@@ -169,7 +169,7 @@ while (!doneFirst) {
 }
 
 // Compare the number of correct answers and alert the result to the user
-if (a4CorrectAnswers <= 80) {
+if (a4CorrectAnswers <= 80 && a4CorrectAnswers >= 0) {
   if (a4CorrectAnswers >= 71 && a4CorrectAnswers <= 80) {
     a4Grade = '12';
   } else if (a4CorrectAnswers >= 56 && a4CorrectAnswers < 70) {
@@ -206,7 +206,7 @@ while (!doneFirst) {
   let firstNumber = prompt(
     'Indtast et tal, og jeg vil fortælle dig hvad der sker med tallet \n\nIndtast tallet: '
   );
-  if (Number(firstNumber) === NaN) {
+  if (isNaN(firstNumber)) {
     alert('Du skal indtaste et tal');
   } else {
     a5Number1 = Number(firstNumber);
@@ -293,17 +293,20 @@ console.log('Month name found...');
 // Find the season of the month
 if (a6MonthNumber >= 2 && a6MonthNumber <= 4) {
   a6Season = 'Forår';
-}
-if (a6MonthNumber >= 5 && a6MonthNumber <= 7) {
+  console.log('Season found...');
+} else if (a6MonthNumber >= 5 && a6MonthNumber <= 7) {
   a6Season = 'Sommer';
-}
-if (a6MonthNumber >= 8 && a6MonthNumber <= 10) {
+  console.log('Season found...');
+} else if (a6MonthNumber >= 8 && a6MonthNumber <= 10) {
   a6Season = 'Efterår';
-}
-if (a6MonthNumber == 11 || a6MonthNumber <= 1) {
+  console.log('Season found...');
+} else if (a6MonthNumber == 11 || a6MonthNumber <= 1) {
   a6Season = 'Vinter';
+  console.log('Season found...');
+} else {
+  a6Season = 'Fejl';
+  console.error('Something went wrong...');
 }
-console.log('Season found...');
 
 // Alert the results to the user
 alert(`Vi er i måneden ${a6MonthName}, og det er ${a6Season}`);
