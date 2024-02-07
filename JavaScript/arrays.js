@@ -53,3 +53,14 @@ function assignment4() {
   console.log(Object.values(person));
   console.log(Object.entries(person));
 }
+
+// ! Assignment 5
+// * Description: Get a number, between 1-10, from the user. As long as the user does not enter a number between 1-10, keep asking for a number. When the user enters a number between 1-10, send an alert to the user with the number.
+function assignment5() {
+  console.log('Assignment 5...');
+  let number;
+  do {
+    number = prompt('Enter a number between 1-10');
+  } while (number < 1 || number > 10);
+  alert('You entered: ' + number);
+}
