@@ -11,7 +11,7 @@ let a1Number2;
 // ? I am sure there is a better way to do this, but I am not sure how to do it. So I will do it the way I know how to do it.
 
 // While loop to get the first number from the user and check if it is a number or not
-doneFirst = false;
+let doneFirst = false;
 while (!doneFirst) {
   let firstNumber = prompt(
     'Indtast to tal, og jeg vil fortælle dig hvilket tal der er størst \n\nIndtast det første tal: '
@@ -25,7 +25,7 @@ while (!doneFirst) {
 }
 
 // While loop to get the second number from the user and check if it is a number or not
-doneSecond = false;
+let doneSecond = false;
 while (!doneSecond) {
   let secondNumber = prompt('Indtast det andet tal: ');
   if (isNaN(secondNumber)) {
@@ -85,7 +85,7 @@ while (!doneSecond) {
 }
 
 // While loop to get the third number from the user and check if it is a number or not
-doneThird = false;
+let doneThird = false;
 while (!doneThird) {
   let thirdNumber = prompt('Indtast det tredje tal: ');
   if (isNaN(thirdNumber)) {
