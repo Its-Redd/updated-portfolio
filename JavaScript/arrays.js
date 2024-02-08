@@ -1,7 +1,7 @@
 'use strict';
 
 // ! Assignment 1
-// * Description: Create an array with the name of four countries. Loop through the array and print each country to the console.
+// * Description: Create an array with the name of four countries. Print the array to the console.
 function assignment1() {
   console.log('Assignment 1...');
   let countries = ['Denmark', 'Sweden', 'Norway', 'Finland'];
@@ -54,11 +54,15 @@ function assignment4() {
 
 // ! Assignment 5
 // * Description: Get a number, between 1-10, from the user. As long as the user does not enter a number between 1-10, keep asking for a number. When the user enters a number between 1-10, send an alert to the user with the number.
+
 function assignment5() {
   console.log('Assignment 5...');
-  let number;
-  do {
-    number = prompt('Enter a number between 1-10');
-  } while (number < 1 || number > 10);
+  let number = prompt('Enter a number between 1-10');
+  if (number < 1 || number > 10 || isNaN(number) || number === '') {
+    do {
+      number = prompt('Invalid input\n\nEnter a number between 1-10');
+    } while (number < 1 || number > 10 || isNaN(number) || number === '');
+  }
+
   alert('You entered: ' + number);
 }
