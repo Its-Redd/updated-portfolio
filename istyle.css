@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,300&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 * {
   margin: 0;
@@ -13,7 +13,7 @@ header {
   background-color: #727272;
   text-align: left;
   font-size: 1em;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin-bottom: 5vh;
   display: flex;
   justify-content: space-between;
@@ -94,21 +94,27 @@ header h6 {
 }
 
 nav {
-  margin-top: 1%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-right: 5%;
-  display: flex;
-  justify-content: space-between;
+  height: 100%;
   min-width: 50%;
 }
 
 nav a {
+  text-align: center;
   color: white;
   text-decoration: none;
-  margin-right: 3%;
+  border-left: #2b2b2b 1px solid;
+  border-right: #2b2b2b 1px solid;
+  padding: 1.25rem 0;
+  transition: all 0.3s ease-in-out;
 }
 
 nav a:hover {
   color: crimson;
+  background-color: #b3b3b3;
+  transform: scale(1.01);
 }
 /* MAIN */
 
@@ -116,7 +122,7 @@ main {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  font-family: "Kanit", sans-serif;
+  font-family: 'Kanit', sans-serif;
   padding-bottom: 10vh;
   padding-top: 5vh;
   border-radius: 2%;
@@ -188,10 +194,12 @@ html {
   border-radius: 1.5em;
   margin-top: 1vh;
   padding: 0 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .classbox:hover {
   transform: scale(1.01);
+  background-color: whitesmoke;
 }
 
 .classbox:active {
@@ -200,6 +208,7 @@ html {
 
 .classbox a {
   color: rgb(82, 82, 82);
+  transition: all 0.3s ease-in-out;
 }
 
 .classbox a:hover {
@@ -218,6 +227,8 @@ html {
 }
 
 .classbox img {
+  border: #2b2b2b 1px solid;
+  border-radius: 0.5em;
   width: 100%;
   aspect-ratio: 16 / 9;
 }
@@ -248,6 +259,32 @@ footer {
   text-align: center;
 }
 
+/* JS Projects */
+.jsprojects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 50vh;
+}
+
+.jsprojects a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  margin: 1%;
+  border: #2b2b2b 1px solid;
+  text-decoration: none;
+  color: white;
+  font-size: 5.5em;
+  transition: all 0.3s ease-in-out;
+}
+
+.jsprojects a:hover {
+  background-color: #a7a7a7;
+  color: crimson;
+}
+
+/* Media queries */
 @media screen and (min-width: 768px) {
   .classbox {
     width: 40%;
